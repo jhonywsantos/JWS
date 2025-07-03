@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Portfólio Profissional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        .font-serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .font-sans {
+            font-family: 'Work Sans', sans-serif;
+        }
+        .progress-fill {
+            transition: width 1s ease-in-out;
+        }
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 2px;
+            background-color: #b4b689;
+            margin: 15px auto 0;
+        }
+        .hover-tilt:hover {
+            transform: rotate(1deg) scale(1.02);
+        }
+    </style>
+</head>
+<body class="bg-[#fff8f6] text-[#333] font-sans antialiased">
+    <!-- Header -->
+    <header class="fixed w-full bg-[#fbf3f1]/90 backdrop-blur-sm z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-serif font-semibold text-[#976a55]">Seu nome + sobrenome</div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-[#976a55] hover:text-[#b4b689] transition-colors duration-300">Sobre</a>
+                <a href="#skills" class="text-[#976a55] hover:text-[#b4b689] transition-colors duration-300">Habilidades</a>
+                <a href="#projects" class="text-[#976a55] hover:text-[#b4b689] transition-colors duration-300">Projetos</a>
+                <a href="#experience" class="text-[#976a55] hover:text-[#b4b689] transition-colors duration-300">Experiência</a>
+                <a href="#contact" class="text-[#976a55] hover:text-[#b4b689] transition-colors duration-300">Contato</a>
+            </nav>
+            <button class="md:hidden focus:outline-none" id="menu-toggle">
+                <i class="fas fa-bars text-xl text-[#976a55]"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-[#fbf3f1] w-full px-6 py-3 shadow-inner" id="mobile-menu">
+            <div class="flex flex-col space-y-3">
+                <a href="#about" class="py-2 text-[#976a55] border-b border-[#976a55]/20">Sobre</a>
+                <a href="#skills" class="py-2 text-[#976a55] border-b border-[#976a55]/20">Habilidades</a>
+                <a href="#projects" class="py-2 text-[#976a55] border-b border-[#976a55]/20">Projetos</a>
+                <a href="#experience" class="py-2 text-[#976a55] border-b border-[#976a55]/20">Experiência</a>
+                <a href="#contact" class="py-2 text-[#976a55]">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-40 pb-24 px-6 bg-gradient-to-b from-[#fbf3f1] via-[#fff8f6] to-[#fbf3f1]">
+        <div class="container mx-auto flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                <h1 class="text-4xl lg:text-5xl font-serif font-semibold text-[#976a55] mb-6 leading-tight">
+                    Criando experiências digitais <span class="text-[#b4b689]">intuitivas</span> e <span class="text-[#b4b689]">significativas</span>
+                </h1>
+                <p class="text-lg text-[#666] mb-8">Profissão</p>
+                <div class="flex space-x-4">
+                    <a href="#projects" class="bg-[#976a55] hover:bg-[#7a5643] text-white px-6 py-3 rounded-lg font-medium transition duration-300 hover-tilt">
+                        Ver Projetos
+                    </a>
+                    <a href="#contact" class="border-2 border-[#976a55] hover:bg-[#976a55]/10 text-[#976a55] px-6 py-3 rounded-lg font-medium transition duration-300 hover-tilt">
+                        Contato
+                    </a>
+                </div>
+            </div>
+            <div class="lg:w-1/2 flex justify-center">
+                <div class="w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-[#b4b689] shadow-lg">
+                    <!-- Placeholder for profile image - replace with actual image -->
+                    <div class="w-full h-full bg-[#e6e0dd] flex items-center justify-center">
+                        <i class="fas fa-user text-[#976a55] text-6xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="mt-20 flex justify-center">
+            <a href="#about" class="animate-bounce text-[#b4b689]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 bg-[#fbf3f1]">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-serif font-semibold text-[#976a55] mb-12 text-center section-title">Sobre Mim</h2>
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-12">
+                    <p class="text-lg text-[#555] mb-6 leading-relaxed">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, vitae fuga! Tenetur dignissimos fuga hic amet quibusdam ipsa dolor tempora, voluptates ratione alias doloribus totam, nisi nostrum magnam beatae impedit.
+                    </p>
+                    <p class="text-lg text-[#555] mb-6 leading-relaxed">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio quam inventore quae harum quia accusantium sint non in recusandae voluptatem, eaque quaerat eos, pariatur explicabo, minus libero quas quod odit.
+                    </p>
+                    <p class="text-lg text-[#555] leading-relaxed">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolor quas nesciunt odit exercitationem sed iste facere accusamus ipsa officiis quia a molestiae quasi minima, provident facilis cumque id rem?
+                    </p>
+                </div>
+                <div class="lg:w-1/2 grid grid-cols-2 gap-5">
+                    <div class="bg-[#fff8f6] p-6 rounded-lg shadow-sm hover-tilt transition duration-300">
+                        <div class="text-[#976a55] mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book-open">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-serif font-semibold text-lg text-[#976a55] mb-2">Formação</h3>
+                        <p class="text-[#666]">(Curso + faculdade)</p>
+                    </div>
+                    <div class="bg-[#fff8f6] p-6 rounded-lg shadow-sm hover-tilt transition duration-300">
+                        <div class="text-[#b4b689] mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-serif font-semibold text-lg text-[#976a55] mb-2">Experiência</h3>
+                        <p class="text-[#666]">(anos) em (área de atuação)</p>
+                    </div>
+                    <div class="bg-[#fff8f6] p-6 rounded-lg shadow-sm hover-tilt transition duration-300">
+                        <div class="text-[#976a55] mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                <polyline points="2 17 12 22 22 17"></polyline>
+                                <polyline points="2 12 12 17 22 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="font-serif font-semibold text-lg text-[#976a55] mb-2">Especialização</h3>
+                        <p class="text-[#666]">(especialista em qual área)</p>
+                    </div>
+                    <div class="bg-[#fff8f6] p-6 rounded-lg shadow-sm hover-tilt transition duration-300">
+                        <div class="text-[#b4b689] mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-target">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <circle cx="12" cy="12" r="6"></circle>
+                                <circle cx="12" cy="12" r="2"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="font-serif font-semibold text-lg text-[#976a55] mb-2">Objetivo</h3>
+                        <p class="text-[#666]">(Qual é o seu objetivo na sua área de atuação)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6 bg-[#fff8f6]">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-serif font-semibold text-[#976a55] mb-12 text-center section-title">Habilidades</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Frontend Skills -->
+                <div class="bg-white p-8 rounded-lg shadow-sm hover-tilt transition duration-300 border-t-4 border-[#976a55]">
+                    <div class="flex items-center mb-6">
+                        <div class="text-[#976a55] mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="font-serif font-semibold text-xl text-[#976a55]">Frontend Development</h3>
+                    </div>
+                    <div class="space-y-5">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-[#555]">HTML5</span>
+                                <span class="text-[#976a55] font-medium">95%</span>
+                            </div>
+                            <div class="w-full bg-[#f3f0ee] rounded-full h-2">
+                                <div class="progress-fill bg-[#b4b689] h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-[#555]">CSS3</span>
+                                <span class="text-[#976a55] font-medium">90%</span>
+                            </div>
+                            <div class="w-full bg-[#f3f0ee] rounded-full h-2">
+                                <div class="progress-fill bg-[#b4b689] h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-[#555]">JavaScript</span>
+                                <span class="text-[#976a55] font-medium">80%</span>
+                            </div>
+                            <div class="w-full bg-[#f3f0ee] rounded-full h-2">
+                                <div class="progress-fill bg-[#b4b689] h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-[#555]">Git</span>
+                                <span class="text-[#976a55] font-medium">85%</span>
+                            </div>
+                            <div class="w-full bg-[#f3f0ee] rounded-full h-2">
+                                <div class="progress-fill bg-[#b4b689] h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- UI/UX Skills -->
+                <div class="bg-white p-8 rounded-lg shadow-sm hover-tilt transition duration-300 border-t-4 border-[#b4b689]">
+                    <div class="flex items-center mb-6">
+                        <div class="text-[#b4b689] mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pen-tool">
+                                <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                                <path d="M2 2l7.586 7.586"></path>
+                                <circle cx="11" cy="11" r="2"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="font-serif font-semibold text-xl text-[#976a55]">UI/UX Design</h3>
+                    </div>
+                    <div class="space-y-5">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-[#555]">Figma</span>
+                                <span class="text-[#976a55] font-medium">90%</span>
+                            </div>
+                            <div class="w-full bg-[#f3f0ee] rounded-full h-2">
+                                <div class="progress-fill bg-[#976a55] h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-[#555]">Wireframing</span>
+                                <span class="text-[#976a55] font-medium">85%</span>
+                            </div>
+                            <div class="w-full bg-[#f3f0ee] rounded-full h-2">
+                                <div class="progress-fill bg-[#976a55] h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-[#555]">Heurísticas de Nielsen</span>
+                                <span class="text-[#976a55] font-medium">80%</span>
+                            </div>
+                            <div class="w-full bg-[#f3f0ee] rounded-full h-2">
+                                <div class="progress-fill bg-[#976a55] h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-[#555]">Prototipagem</span>
+                                <span class="text-[#976a55] font-medium">88%</span>
+                            </div>
+                            <div class="w-full bg-[#f3f0ee] rounded-full h-2">
+                                <div class="progress-fill bg-[#976a55] h-2 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Backend & Soft Skills -->
+                <div class="bg-white p-8 rounded-lg shadow-sm hover-tilt transition duration-300 border-t-4 border-[#976a55]">
+                    <div class="flex items-center mb-6">
+                        <div class="text-[#976a55] mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-server">
+                                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                            </svg>
+                        </div>
+                        <h3 class="font-serif font-semibold text-xl text-[#976a55]">Outras Habilidades</h3>
+                    </div>
+                    <div class="space-y-5">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-[#555]">Python</span>
+                                <span class="text-[#976a55] font-medium">75%</span>
+                            </div>
+                            <div class="w-full bg-[#f3f0ee] rounded-full h-2">
+                                <div class="progress-fill bg-[#b4b689] h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-[#555]">Java</span>
+                                <span class="text-[#976a55] font-medium">65%</span>
+                            </div>
+                            <div class="w-full bg-[#f3f0ee] rounded-full h-2">
+                                <div class="progress-fill bg-[#b4b689] h-2 rounded-full" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 pt-6 border-t border-[#f3f0ee]">
+                        <div class="flex items-center mb-4">
+                            <div class="text-[#b4b689] mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                            </div>
+                            <h4 class="font-serif font-semibold text-lg text-[#976a55]">Soft Skills</h4>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-[#f3f0ee] text-[#976a55] px-4 py-2 rounded-full text-sm">Comunicação</span>
+                            <span class="bg-[#f3f0ee] text-[#976a55] px-4 py-2 rounded-full text-sm">Autonomia</span>
+                            <span class="bg-[#f3f0ee] text-[#976a55] px-4 py-2 rounded-full text-sm">Organização</span>
+                            <span class="bg-[#f3f0ee] text-[#976a55] px-4 py-2 rounded-full text-sm">Trabalho em equipe</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 bg-[#fbf3f1]">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-serif font-semibold text-[#976a55] mb-12 text-center section-title">Projetos Selecionados</h2>
+            
+            <!-- Featured Project -->
+            <div class="mb-16">
+                <div class="flex flex-col lg:flex-row bg-white rounded-xl overflow-hidden shadow-lg hover-tilt transition duration-500">
+                    <div class="lg:w-1/2">
+                        <div class="h-full bg-[#e6e0dd] flex items-center justify-center p-8">
+                            <div class="text-center">
+                                <i class="fas fa-burger text-[#976a55] text-6xl mb-4"></i>
+                                <p class="text-[#555]">Imagem do projeto escolhido</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 p-8 lg:p-12">
+                        <h3 class="font-serif font-semibold text-2xl text-[#976a55] mb-4">Título Aqui</h3>
+                        <p class="text-[#555] mb-6 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ullam aliquid dolores repudiandae qui mollitia accusamus quo deserunt nisi delectus, nostrum aperiam. Hic aliquam animi distinctio eum nostrum rerum vero!</p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-serif font-semibold text-lg text-[#976a55] mb-3">Subtítulo/Métologia:</h4>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="bg-[#f3f0ee] text-[#976a55] px-4 py-2 rounded-full">xxxx</span>
+                                <span class="bg-[#f3f0ee] text-[#976a55] px-4 py-2 rounded-full">xxxx</span>
+                                <span class="bg-[#f3f0ee] text-[#976a55] px-4 py-2 rounded-full">xxxx</span>
+                                <span class="bg-[#f3f0ee] text-[#976a55] px-4 py-2 rounded-full">xxxx</span>
+                                <span class="bg-[#f3f0ee] text-[#976a55] px-4 py-2 rounded-full">xxxx</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-serif font-semibold text-lg text-[#976a55] mb-3">Desafios superados:</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b4b689" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 mt-1 feather feather-check">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span class="text-[#555] flex-1">lorem ipsum</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b4b689" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 mt-1 feather feather-check">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span class="text-[#555] flex-1">lorem ipsum</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b4b689" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 mt-1 feather feather-check">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span class="text-[#555] flex-1">lorem ipsum</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#" class="bg-[#976a55] hover:bg-[#7a5643] text-white px-6 py-3 rounded-lg font-medium transition duration-300 flex items-center">
+                                Agende uma reunião
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 feather feather-external-link">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </a>
+                            <a href="#" class="border-2 border-[#976a55] hover:bg-[#976a55]/10 text-[#976a55] px-6 py-3 rounded-lg font-medium transition duration-300 flex items-center">
+                                Saiba mais!
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 feather feather-github">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Other Projects -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover-tilt transition duration-500">
+                    <div class="h-48 bg-[#e6e0dd] flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-chart-line text-[#976a55] text-4xl mb-3"></i>
+                            <p class="text-[#555]">Imagem do Projeto</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif font-semibold text-xl text-[#976a55] mb-3">Título</h3>
+                        <p class="text-[#555] mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum praesentium dolorum ut debitis, quas expedita eos illo porro molestiae, nobis illum fuga labore. Earum quas non recusandae culpa, quia impedit.</p>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="bg-[#f3f0ee] text-[#976a55] px-3 py-1 rounded-full text-xs">xxxx</span>
+                            <span class="bg-[#f3f0ee] text-[#976a55] px-3 py-1 rounded-full text-xs">xxxx</span>
+                            <span class="bg-[#f3f0ee] text-[#976a55] px-3 py-1 rounded-full text-xs">xxxx</span>
+                        </div>
+                        <a href="#" class="text-[#b4b689] hover:text-[#976a55] font-medium flex items-center">
+                            Ver Detalhes
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 feather feather-arrow-right">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover-tilt transition duration-500">
+                    <div class="h-48 bg-[#e6e0dd] flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-shopping-cart text-[#976a55] text-4xl mb-3"></i>
+                            <p class="text-[#555]">Imagem do Projeto</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif font-semibold text-xl text-[#976a55] mb-3">Título</h3>
+                        <p class="text-[#555] mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et voluptatem aut fugiat repudiandae excepturi laboriosam, perspiciatis odit nulla? Modi tempora nobis rem sapiente nesciunt quidem adipisci iure molestias iste facilis.</p>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="bg-[#f3f0ee] text-[#976a55] px-3 py-1 rounded-full text-xs">xxxx</span>
+                            <span class="bg-[#f3f0ee] text-[#976a55] px-3 py-1 rounded-full text-xs">xxxx</span>
+                            <span class="bg-[#f3f0ee] text-[#976a55] px-3 py-1 rounded-full text-xs">xxxx</span>
+                        </div>
+                        <a href="#" class="text-[#b4b689] hover:text-[#976a55] font-medium flex items-center">
+                            Ver Detalhes
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 feather feather-arrow-right">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover-tilt transition duration-500">
+                    <div class="h-48 bg-[#e6e0dd] flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-user-tie text-[#976a55] text-4xl mb-3"></i>
+                            <p class="text-[#555]">Imagem do Projeto</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif font-semibold text-xl text-[#976a55] mb-3">Título</h3>
+                        <p class="text-[#555] mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia rem nam aliquid consequatur quis rerum illo dignissimos nulla ullam. Amet minima culpa consequatur temporibus quod possimus, iste quasi. Nisi, id.</p>
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="bg-[#f3f0ee] text-[#976a55] px-3 py-1 rounded-full text-xs">xxxx</span>
+                            <span class="bg-[#f3f0ee] text-[#976a55] px-3 py-1 rounded-full text-xs">xxxx</span>
+                            <span class="bg-[#f3f0ee] text-[#976a55] px-3 py-1 rounded-full text-xs">xxxx</span>
+                        </div>
+                        <a href="#" class="text-[#b4b689] hover:text-[#976a55] font-medium flex items-center">
+                            Ver Detalhes
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 feather feather-arrow-right">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center text-[#976a55] hover:text-[#b4b689] font-medium text-lg">
+                    Explorar mais projetos
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 feather feather-github">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-6 bg-[#fff8f6]">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-serif font-semibold text-[#976a55] mb-12 text-center section-title">Jornada Profissional</h2>
+            
+            <div class="max-w-3xl mx-auto space-y-8">
+                <!-- Experience 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-sm hover-tilt transition duration-300">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
+                        <div class="flex items-start">
+                            <div class="w-14 h-14 rounded-full bg-[#976a55] flex items-center justify-center text-white mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-landmark">
+                                    <line x1="3" y1="11" x2="21" y2="11"></line>
+                                    <line x1="12" y1="2" x2="12" y2="22"></line>
+                                    <path d="M17 11h1a3 3 0 0 1 3 3v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1a3 3 0 0 1 3-3h1"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-serif font-semibold text-xl text-[#976a55]">Empresa</h3>
+                                <p class="font-medium text-[#555]">Cargo</p>
+                            </div>
+                        </div>
+                        <span class="text-[#b4b689] font-medium mt-4 md:mt-0">Período</span>
+                    </div>
+                    <ul class="space-y-3 pl-18">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b4b689" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 mt-1 feather feather-check-circle">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            <span class="text-[#555] flex-1">papel desempenhado</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b4b689" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 mt-1 feather feather-check-circle">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            <span class="text-[#555] flex-1">papel desempenhado</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b4b689" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 mt-1 feather feather-check-circle">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            <span class="text-[#555] flex-1">papel desempenhado</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Experience 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-sm hover-tilt transition duration-300">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
+                        <div class="flex items-start">
+                            <div class="w-14 h-14 rounded-full bg-[#b4b689] flex items-center justify-center text-white mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-zap">
+                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-serif font-semibold text-xl text-[#976a55]">Empresa</h3>
+                                <p class="font-medium text-[#555]">Cargo</p>
+                            </div>
+                        </div>
+                        <span class="text-[#b4b689] font-medium mt-4 md:mt-0">Período</span>
+                    </div>
+                    <ul class="space-y-3 pl-18">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#976a55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 mt-1 feather feather-check-circle">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            <span class="text-[#555] flex-1">papel desempenhado</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#976a55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 mt-1 feather feather-check-circle">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            <span class="text-[#555] flex-1">papel desempenhado</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#976a55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 mt-1 feather feather-check-circle">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            <span class="text-[#555] flex-1">papel desempenhado</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="py-20 px-6 bg-[#fbf3f1]">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-serif font-semibold text-[#976a55] mb-12 text-center section-title">Certificações</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Certification 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-sm hover-tilt transition duration-300 group">
+                    <div class="flex items-start mb-6">
+                        <div class="text-[#976a55] group-hover:text-[#b4b689] transition-colors duration-300 mr-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-serif font-semibold text-xl text-[#976a55] mb-1">Título</h3>
+                            <p class="text-[#555] text-sm mb-3">Orgão emissor/Empresa Certificadora</p>
+                            <p class="text-[#555]">área de conhecimento</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certification 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-sm hover-tilt transition duration-300 group">
+                    <div class="flex items-start mb-6">
+                        <div class="text-[#b4b689] group-hover:text-[#976a55] transition-colors duration-300 mr-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book-open">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-serif font-semibold text-xl text-[#976a55] mb-1">Título</h3>
+                            <p class="text-[#555] text-sm mb-3">Orgão emissor/Empresa Certificadora</p>
+                            <p class="text-[#555]">área de conhecimento</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certification 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-sm hover-tilt transition duration-300 group">
+                    <div class="flex items-start mb-6">
+                        <div class="text-[#976a55] group-hover:text-[#b4b689] transition-colors duration-300 mr-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                <polyline points="2 17 12 22 22 17"></polyline>
+                                <polyline points="2 12 12 17 22 12"></polyline>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-serif font-semibold text-xl text-[#976a55] mb-1">Título</h3>
+                            <p class="text-[#555] text-sm mb-3">Orgão emissor/Empresa Certificadora</p>
+                            <p class="text-[#555]">área de conhecimento</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 bg-[#f3f0ee]">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-serif font-semibold text-[#976a55] mb-12 text-center section-title">Vamos Conectar</h2>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <h3 class="font-serif font-semibold text-2xl text-[#976a55] mb-6">Envie uma Mensagem</h3>
+                    <p class="text-[#555] mb-8 leading-relaxed">
+                        mensagem convidativa para entrar em contato comigo
+                    </p>
+                    
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block mb-2 font-medium text-[#555]">Nome</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 rounded-lg bg-white border border-[#976a55]/30 focus:outline-none focus:ring-1 focus:ring-[#976a55] text-[#555] placeholder-[#976a55]/50">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2 font-medium text-[#555]">E-mail</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg bg-white border border-[#976a55]/30 focus:outline-none focus:ring-1 focus:ring-[#976a55] text-[#555] placeholder-[#976a55]/50">
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2 font-medium text-[#555]">Mensagem</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg bg-white border border-[#976a55]/30 focus:outline-none focus:ring-1 focus:ring-[#976a55] text-[#555] placeholder-[#976a55]/50"></textarea>
+                        </div>
+                        <button type="submit" class="bg-[#976a55] hover:bg-[#7a5643] text-white px-8 py-3 rounded-lg font-medium transition duration-300 hover-tilt">
+                            Enviar Mensagem
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline ml-2 feather feather-send">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h3 class="font-serif font-semibold text-2xl text-[#976a55] mb-6">Informações de Contato</h3>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="text-[#b4b689] mr-5 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-medium text-lg text-[#976a55] mb-1">E-mail</h4>
+                                <a href="mailto:jhonywictorsantos@gmail.com" class="text-[#555] hover:text-[#b4b689] transition-colors duration-300">seu e-mail</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-[#976a55] mr-5 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-medium text-lg text-[#976a55] mb-1">Telefone</h4>
+                                <a href="tel:+5582999999999" class="text-[#555] hover:text-[#b4b689] transition-colors duration-300">número de telefone</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-[#b4b689] mr-5 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-medium text-lg text-[#976a55] mb-1">Localização</h4>
+                                <p class="text-[#555]">Cidade + Estado</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12">
+                        <h3 class="font-serif font-semibold text-2xl text-[#976a55] mb-6">Conecte-se Comigo</h3>
+                        <div class="flex space-x-5">
+                            <a href="#" class="w-12 h-12 rounded-full bg-[#976a55]/10 hover:bg-[#976a55] text-[#976a55] hover:text-white flex items-center justify-center transition-colors duration-300">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-[#976a55]/10 hover:bg-[#976a55] text-[#976a55] hover:text-white flex items-center justify-center transition-colors duration-300">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-[#976a55]/10 hover:bg-[#976a55] text-[#976a55] hover:text-white flex items-center justify-center transition-colors duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-[#976a55]/10 hover:bg-[#976a55] text-[#976a55] hover:text-white flex items-center justify-center transition-colors duration-300">
+                                <i class="fas fa-file-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12 bg-white p-8 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="text-[#b4b689] mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                </svg>
+                            </div>
+                            <h4 class="font-serif font-semibold text-lg text-[#976a55]">Disponibilidade para oportunidades</h4>
+                        </div>
+                        <p class="text-[#555] mb-4">Atualmente estou aberto a:</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b4b689" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 mt-1 feather feather-check">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span class="text-[#555] flex-1">vaga de emprego</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b4b689" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 mt-1 feather feather-check">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span class="text-[#555] flex-1">vaga de emprego</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b4b689" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 mt-1 feather feather-check">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span class="text-[#555] flex-1">vaga de emprego
+</body>
+</html>
