@@ -3,38 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Portfólio Profissional</title>
+    <title>Portfólio Profissional</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-    <style>
-        .font-serif {
-            font-family: 'Cormorant Garamond', serif;
-        }
-        .font-sans {
-            font-family: 'Work Sans', sans-serif;
-        }
-        .progress-fill {
-            transition: width 1s ease-in-out;
-        }
-        .section-title::after {
-            content: "";
-            display: block;
-            width: 60px;
-            height: 2px;
-            background-color: #b4b689;
-            margin: 15px auto 0;
-        }
-        .hover-tilt:hover {
-            transform: rotate(1deg) scale(1.02);
-        }
-    </style>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="bg-[#fff8f6] text-[#333] font-sans antialiased">
     <!-- Header -->
     <header class="fixed w-full bg-[#fbf3f1]/90 backdrop-blur-sm z-50 shadow-sm">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-serif font-semibold text-[#976a55]">Seu nome + sobrenome</div>
+            <div class="text-2xl font-serif font-semibold text-[#976a55]">Jhony Wictor Santos</div>
             <nav class="hidden md:flex space-x-8">
                 <a href="#about" class="text-[#976a55] hover:text-[#b4b689] transition-colors duration-300">Sobre</a>
                 <a href="#skills" class="text-[#976a55] hover:text-[#b4b689] transition-colors duration-300">Habilidades</a>
@@ -67,10 +46,10 @@
                 </h1>
                 <p class="text-lg text-[#666] mb-8">Profissão</p>
                 <div class="flex space-x-4">
-                    <a href="#projects" class="bg-[#976a55] hover:bg-[#7a5643] text-white px-6 py-3 rounded-lg font-medium transition duration-300 hover-tilt">
+                    <a href="#projects" class="bg-[#976a55] hover:bg-[#7a5643] text-white px-6 py-3 rounded-lg font-medium transition duration-300 hover-raise">
                         Ver Projetos
                     </a>
-                    <a href="#contact" class="border-2 border-[#976a55] hover:bg-[#976a55]/10 text-[#976a55] px-6 py-3 rounded-lg font-medium transition duration-300 hover-tilt">
+                    <a href="#contact" class="border-2 border-[#976a55] hover:bg-[#976a55]/10 text-[#976a55] px-6 py-3 rounded-lg font-medium transition duration-300 hover-raise">
                         Contato
                     </a>
                 </div>
@@ -112,7 +91,7 @@
                     </p>
                 </div>
                 <div class="lg:w-1/2 grid grid-cols-2 gap-5">
-                    <div class="bg-[#fff8f6] p-6 rounded-lg shadow-sm hover-tilt transition duration-300">
+                    <div class="bg-[#fff8f6] p-6 rounded-lg shadow-sm hover-raise transition duration-300">
                         <div class="text-[#976a55] mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book-open">
                                 <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
@@ -122,7 +101,7 @@
                         <h3 class="font-serif font-semibold text-lg text-[#976a55] mb-2">Formação</h3>
                         <p class="text-[#666]">(Curso + faculdade)</p>
                     </div>
-                    <div class="bg-[#fff8f6] p-6 rounded-lg shadow-sm hover-tilt transition duration-300">
+                    <div class="bg-[#fff8f6] p-6 rounded-lg shadow-sm hover-raise transition duration-300">
                         <div class="text-[#b4b689] mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase">
                                 <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
@@ -132,7 +111,7 @@
                         <h3 class="font-serif font-semibold text-lg text-[#976a55] mb-2">Experiência</h3>
                         <p class="text-[#666]">(anos) em (área de atuação)</p>
                     </div>
-                    <div class="bg-[#fff8f6] p-6 rounded-lg shadow-sm hover-tilt transition duration-300">
+                    <div class="bg-[#fff8f6] p-6 rounded-lg shadow-sm hover-raise transition duration-300">
                         <div class="text-[#976a55] mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers">
                                 <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
@@ -143,7 +122,7 @@
                         <h3 class="font-serif font-semibold text-lg text-[#976a55] mb-2">Especialização</h3>
                         <p class="text-[#666]">(especialista em qual área)</p>
                     </div>
-                    <div class="bg-[#fff8f6] p-6 rounded-lg shadow-sm hover-tilt transition duration-300">
+                    <div class="bg-[#fff8f6] p-6 rounded-lg shadow-sm hover-raise transition duration-300">
                         <div class="text-[#b4b689] mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-target">
                                 <circle cx="12" cy="12" r="10"></circle>
@@ -165,7 +144,7 @@
             <h2 class="text-3xl font-serif font-semibold text-[#976a55] mb-12 text-center section-title">Habilidades</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Frontend Skills -->
-                <div class="bg-white p-8 rounded-lg shadow-sm hover-tilt transition duration-300 border-t-4 border-[#976a55]">
+                <div class="bg-white p-8 rounded-lg shadow-sm hover-raise transition duration-300 border-t-4 border-[#976a55]">
                     <div class="flex items-center mb-6">
                         <div class="text-[#976a55] mr-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code">
@@ -216,7 +195,7 @@
                 </div>
                 
                 <!-- UI/UX Skills -->
-                <div class="bg-white p-8 rounded-lg shadow-sm hover-tilt transition duration-300 border-t-4 border-[#b4b689]">
+                <div class="bg-white p-8 rounded-lg shadow-sm hover-raise transition duration-300 border-t-4 border-[#b4b689]">
                     <div class="flex items-center mb-6">
                         <div class="text-[#b4b689] mr-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pen-tool">
@@ -269,7 +248,7 @@
                 </div>
                 
                 <!-- Backend & Soft Skills -->
-                <div class="bg-white p-8 rounded-lg shadow-sm hover-tilt transition duration-300 border-t-4 border-[#976a55]">
+                <div class="bg-white p-8 rounded-lg shadow-sm hover-raise transition duration-300 border-t-4 border-[#976a55]">
                     <div class="flex items-center mb-6">
                         <div class="text-[#976a55] mr-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-server">
@@ -333,7 +312,7 @@
             
             <!-- Featured Project -->
             <div class="mb-16">
-                <div class="flex flex-col lg:flex-row bg-white rounded-xl overflow-hidden shadow-lg hover-tilt transition duration-500">
+                <div class="flex flex-col lg:flex-row bg-white rounded-xl overflow-hidden shadow-lg hover-raise transition duration-500">
                     <div class="lg:w-1/2">
                         <div class="h-full bg-[#e6e0dd] flex items-center justify-center p-8">
                             <div class="text-center">
@@ -404,7 +383,7 @@
             <!-- Other Projects -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-md hover-tilt transition duration-500">
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover-raise transition duration-500">
                     <div class="h-48 bg-[#e6e0dd] flex items-center justify-center">
                         <div class="text-center">
                             <i class="fas fa-chart-line text-[#976a55] text-4xl mb-3"></i>
@@ -430,7 +409,7 @@
                 </div>
                 
                 <!-- Project 2 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-md hover-tilt transition duration-500">
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover-raise transition duration-500">
                     <div class="h-48 bg-[#e6e0dd] flex items-center justify-center">
                         <div class="text-center">
                             <i class="fas fa-shopping-cart text-[#976a55] text-4xl mb-3"></i>
@@ -456,7 +435,7 @@
                 </div>
                 
                 <!-- Project 3 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-md hover-tilt transition duration-500">
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover-raise transition duration-500">
                     <div class="h-48 bg-[#e6e0dd] flex items-center justify-center">
                         <div class="text-center">
                             <i class="fas fa-user-tie text-[#976a55] text-4xl mb-3"></i>
@@ -500,7 +479,7 @@
             
             <div class="max-w-3xl mx-auto space-y-8">
                 <!-- Experience 1 -->
-                <div class="bg-white p-8 rounded-lg shadow-sm hover-tilt transition duration-300">
+                <div class="bg-white p-8 rounded-lg shadow-sm hover-raise transition duration-300">
                     <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
                         <div class="flex items-start">
                             <div class="w-14 h-14 rounded-full bg-[#976a55] flex items-center justify-center text-white mr-4">
@@ -543,7 +522,7 @@
                 </div>
                 
                 <!-- Experience 2 -->
-                <div class="bg-white p-8 rounded-lg shadow-sm hover-tilt transition duration-300">
+                <div class="bg-white p-8 rounded-lg shadow-sm hover-raise transition duration-300">
                     <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
                         <div class="flex items-start">
                             <div class="w-14 h-14 rounded-full bg-[#b4b689] flex items-center justify-center text-white mr-4">
@@ -593,7 +572,7 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Certification 1 -->
-                <div class="bg-white p-8 rounded-lg shadow-sm hover-tilt transition duration-300 group">
+                <div class="bg-white p-8 rounded-lg shadow-sm hover-raise transition duration-300 group">
                     <div class="flex items-start mb-6">
                         <div class="text-[#976a55] group-hover:text-[#b4b689] transition-colors duration-300 mr-6">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-award">
@@ -610,7 +589,7 @@
                 </div>
                 
                 <!-- Certification 2 -->
-                <div class="bg-white p-8 rounded-lg shadow-sm hover-tilt transition duration-300 group">
+                <div class="bg-white p-8 rounded-lg shadow-sm hover-raise transition duration-300 group">
                     <div class="flex items-start mb-6">
                         <div class="text-[#b4b689] group-hover:text-[#976a55] transition-colors duration-300 mr-6">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book-open">
@@ -627,7 +606,7 @@
                 </div>
                 
                 <!-- Certification 3 -->
-                <div class="bg-white p-8 rounded-lg shadow-sm hover-tilt transition duration-300 group">
+                <div class="bg-white p-8 rounded-lg shadow-sm hover-raise transition duration-300 group">
                     <div class="flex items-start mb-6">
                         <div class="text-[#976a55] group-hover:text-[#b4b689] transition-colors duration-300 mr-6">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers">
@@ -672,7 +651,7 @@
                             <label for="message" class="block mb-2 font-medium text-[#555]">Mensagem</label>
                             <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg bg-white border border-[#976a55]/30 focus:outline-none focus:ring-1 focus:ring-[#976a55] text-[#555] placeholder-[#976a55]/50"></textarea>
                         </div>
-                        <button type="submit" class="bg-[#976a55] hover:bg-[#7a5643] text-white px-8 py-3 rounded-lg font-medium transition duration-300 hover-tilt">
+                        <button type="submit" class="bg-[#976a55] hover:bg-[#7a5643] text-white px-8 py-3 rounded-lg font-medium transition duration-300 hover-raise">
                             Enviar Mensagem
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline ml-2 feather feather-send">
                                 <line x1="22" y1="2" x2="11" y2="13"></line>
@@ -771,6 +750,44 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b4b689" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 mt-1 feather feather-check">
                                     <polyline points="20 6 9 17 4 12"></polyline>
                                 </svg>
-                                <span class="text-[#555] flex-1">vaga de emprego
+                                <span class="text-[#555] flex-1">vaga de emprego</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#976a55] text-white py-12 px-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="text-2xl font-serif font-semibold mb-2">Seu nome + sobrenome</div>
+                    <p class="text-[#f3f0ee]">mensagem de rodapé</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-white hover:text-[#b4b689] transition-colors duration-300">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-[#b4b689] transition-colors duration-300">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-[#b4b689] transition-colors duration-300">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-[#b4b689] transition-colors duration-300">
+                        <i class="fas fa-file-alt text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-[#b4b689]/30 mt-8 pt-8 text-center text-[#f3f0ee]">
+                <p>&copy; <span id="current-year"></span> Seu nome + sobrenome. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
 </body>
 </html>
