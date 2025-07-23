@@ -29,11 +29,7 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Animação para as barras de progresso */
-.progress-fill {
-    width: 0;
-    transition: width 1.5s ease-out;
-}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {

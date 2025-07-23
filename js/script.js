@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    
     // Form submission handling
     const contactForm = document.querySelector('form');
     if (contactForm) {
