@@ -6,9 +6,20 @@
     font-family: 'Work Sans', sans-serif;
 }
 
+/* Substitua a regra .progress-fill existente por esta: */
 .progress-fill {
     width: 0 !important;
+    height: 100%;
+    border-radius: inherit;
     transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1);
+    transform-origin: left center;
+}
+
+/* Adicione esta regra para o container das barras */
+.skills .w-full.bg-\[\#f3f0ee\] {
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
 }
 
 .section-title::after {
