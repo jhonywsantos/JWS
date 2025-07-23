@@ -19,34 +19,39 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentYear = new Date().getFullYear();
     document.getElementById('current-year').textContent = currentYear;
     
-    // Animate progress bars when they come into view
-    const progressBars = document.querySelectorAll('.progress-fill');
-    
+    // Improved progress bars animation
     const animateProgressBars = () => {
+        const progressBars = document.querySelectorAll('.progress-fill');
+        
         progressBars.forEach(bar => {
-            const width = bar.style.width;
-            bar.style.width = '0';
+            const originalWidth = bar.getAttribute('style');
+            if (!originalWidth) return;
             
-            setTimeout(() => {
-                bar.style.width = width;
-            }, 100);
+            const widthValue = originalWidth.match(/width:\s*(\d+)%/);
+            if (!widthValue) return;
+            
+            bar.style.width = '0';
+            void bar.offsetWidth;
+            
+            bar.style.width = widthValue[1] + '%';
         });
     };
     
-    // Intersection Observer for progress bars
-    const observer = new IntersectionObserver((entries) => {
+    const progressObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 animateProgressBars();
-                observer.unobserve(entry.target);
+                progressObserver.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.5 });
+    }, { 
+        threshold: 0.2,
+        rootMargin: '0px 0px -50px 0px'
+    });
     
-    // Observe the skills section
     const skillsSection = document.getElementById('skills');
     if (skillsSection) {
-        observer.observe(skillsSection);
+        progressObserver.observe(skillsSection);
     }
     
     // Smooth scroll for anchor links
@@ -66,14 +71,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    
     // Form submission handling
     const contactForm = document.querySelector('form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Here you would typically send the form data to a server
             alert('Mensagem enviada com sucesso! Entrarei em contato em breve.');
             this.reset();
         });
