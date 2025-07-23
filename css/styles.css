@@ -7,7 +7,8 @@
 }
 
 .progress-fill {
-    transition: width 1s ease-in-out;
+    width: 0 !important;
+    transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 .section-title::after {
@@ -29,39 +30,31 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .section-title::after {
         margin: 10px auto 0;
     }
     
-    /* Adjust padding for mobile */
     section {
         padding: 50px 20px;
     }
     
-    /* Hero section adjustments */
     .hero-content {
         text-align: center;
     }
     
-    /* About section grid adjustments */
     .about-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
     
-    /* Project cards full width on mobile */
     .project-card {
         width: 100%;
     }
 }
 
-/* Tablet adjustments */
 @media (min-width: 769px) and (max-width: 1024px) {
-    /* Adjust grid columns for tablet */
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -71,26 +64,27 @@
     }
 }
 
-/* Viewport meta tag ensures proper scaling on mobile */
 @viewport {
     width: device-width;
     zoom: 1.0;
 }
 
-/* Improved touch targets for mobile */
 a, button {
     min-width: 44px;
     min-height: 44px;
 }
 
-/* Better spacing for mobile navigation */
 #mobile-menu a {
     padding: 12px 0;
 }
 
-/* Responsive typography */
 html {
     font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 @media (max-width: 768px) {
@@ -105,25 +99,8 @@ html {
     h2 {
         font-size: 1.75rem;
     }
-}
-
-/* Improved form inputs for mobile */
-input, textarea, button {
-    font-size: 1rem;
-}
-
-@media (max-width: 768px) {
+    
     input, textarea, button {
         font-size: 0.9rem;
     }
-}
-
-/* Smooth scrolling for better mobile experience */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Prevent horizontal scrolling */
-body {
-    overflow-x: hidden;
 }
