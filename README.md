@@ -1,21 +1,26 @@
 # 🎨 Portfólio Profissional - Jhony Wictor Santos
 
 Portfólio profissional moderno e responsivo desenvolvido para destacar habilidades, projetos e experiências profissionais.
+<img width="1342" height="598" alt="image" src="https://github.com/user-attachments/assets/b9ce650a-2d6d-4dae-9b7f-5dd1d2421e91" />
 
-🔗 [Demonstração Online](https://jhonywsantos.github.io/JWS/)  
-📦 [Repositório no GitHub](https://github.com/jhonywsantos/JWS)
+🔗 [Demonstração Online](https://jhonywsantos.github.io/JWS/)  📦 [Repositório no GitHub](https://github.com/jhonywsantos/JWS)
 
 ---
 
 ## 🗂️ Sobre o Projeto
 
 Este portfólio é uma aplicação web estática criada para apresentar de forma elegante e interativa:
+- ✅ **Seção "Sobre Mim"** com informações profissionais e acadêmicas
+<img width="1334" height="633" alt="image" src="https://github.com/user-attachments/assets/3c2f2cc8-81e9-4295-92c3-570ef6933d24" />
 
-- ✅ **Seção "Sobre Mim"** com informações profissionais e acadêmicas  
-- ✅ **Habilidades Técnicas** com barras de progresso animadas  
+- ✅ **Habilidades Técnicas** com barras de progresso animadas
+<img width="1334" height="635" alt="image" src="https://github.com/user-attachments/assets/736c4d61-a001-4695-8a5a-e993150839ec" />
+
 - ✅ **Galeria de Projetos** com detalhes e tecnologias utilizadas  
 - ✅ **Linha do Tempo** da experiência profissional  
-- ✅ **Carrossel de Certificações** interativo  
+- ✅ **Carrossel de Certificações** interativo
+<img width="1334" height="616" alt="image" src="https://github.com/user-attachments/assets/46fff875-a3eb-45a5-b509-0caf6173a49f" />
+  
 - ✅ **Seção de Contato** com formulário funcional
 
 ---
