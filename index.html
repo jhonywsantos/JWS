@@ -7,8 +7,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/hero.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.tailwindcss.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-[#fff8f6] text-[#333] font-sans antialiased">
     <!-- Header -->
@@ -949,7 +951,40 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
-    <script src="js/certifications.js"></script>
+    <script src="script.js"></script>
+    <script>
+    // Fallback para caso o JavaScript principal não carregue
+    document.addEventListener('DOMContentLoaded', function() {
+        // Verifica se as animações principais foram carregadas
+        if (typeof initCertificationsCarousel !== 'function') {
+        console.warn('O JavaScript principal não carregou, ativando fallback...');
+        setupFallbackAnimations();
+        }
+        
+        // Atualiza o ano no footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    });
+
+    function setupFallbackAnimations() {
+        // Animações básicas de fallback
+        const progressBars = document.querySelectorAll('.progress-fill');
+        progressBars.forEach(bar => {
+        const width = bar.style.width;
+        bar.style.width = '0';
+        setTimeout(() => {
+            bar.style.width = width;
+        }, 100);
+        });
+
+        // Menu mobile básico
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        }
+    }
+    </script>
 </body>
 </html>
