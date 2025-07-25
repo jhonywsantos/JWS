@@ -66,6 +66,7 @@ JWS/
 │
 ├─ index.html             # Página principal
 └─ README.md              # Documentação do projeto
+└─ SECURITY.md            # Política do projeto 
 ```
 🚀 Como Executar Localmente
 ```
