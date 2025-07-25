@@ -951,40 +951,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script>
-    // Fallback para caso o JavaScript principal não carregue
-    document.addEventListener('DOMContentLoaded', function() {
-        // Verifica se as animações principais foram carregadas
-        if (typeof initCertificationsCarousel !== 'function') {
-        console.warn('O JavaScript principal não carregou, ativando fallback...');
-        setupFallbackAnimations();
-        }
-        
-        // Atualiza o ano no footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    });
-
-    function setupFallbackAnimations() {
-        // Animações básicas de fallback
-        const progressBars = document.querySelectorAll('.progress-fill');
-        progressBars.forEach(bar => {
-        const width = bar.style.width;
-        bar.style.width = '0';
-        setTimeout(() => {
-            bar.style.width = width;
-        }, 100);
-        });
-
-        // Menu mobile básico
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (menuToggle && mobileMenu) {
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        }
-    }
-    </script>
+    <script src="js/script.js"></script>
+    <script src="js/certifications.js"></script>
 </body>
 </html>
