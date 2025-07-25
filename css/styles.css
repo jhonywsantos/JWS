@@ -127,3 +127,40 @@ html {
 body {
     overflow-x: hidden;
 }
+
+.hover-raise {
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-raise:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilo para os dots */
+.cert-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #976a55;
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.cert-dot.active {
+    opacity: 1;
+}
+
+/* Ajustes de responsividade para os botões de navegação */
+@media (max-width: 640px) {
+    .cert-carousel-prev, .cert-carousel-next {
+        transform: translateY(-50%) scale(0.8);
+    }
+}
+
+/* Transição suave para o carrossel */
+.cert-carousel {
+    transition: transform 0.3s ease-in-out;
+}
