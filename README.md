@@ -84,4 +84,4 @@ https://jhonywsantos.github.io/JWS/
 
 📝 Licença
 Este projeto está licenciado sob a licença MIT.
-Consulte o arquivo [LICENSE]() para mais detalhes.
+Consulte o arquivo [LICENSE](https://github.com/jhonywsantos/JWS/blob/main/LICENSE) para mais detalhes.
