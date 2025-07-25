@@ -3,14 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Profissional</title>
+    <title>Portfólio Profissional - Jhony Wictor Santos</title>
+    
+    <!-- Pré-carregar recursos críticos -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Work+Sans:wght@300;400;500&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Tailwind via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.tailwindcss.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#976a55',
+                        secondary: '#b4b689',
+                        light: '#fff8f6',
+                        dark: '#333',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 <body class="bg-[#fff8f6] text-[#333] font-sans antialiased">
     <!-- Header -->
@@ -24,7 +46,7 @@
                 <a href="#experience" class="text-[#976a55] hover:text-[#422e24] transition-colors duration-300">Experiência</a>
                 <a href="#contact" class="text-[#976a55] hover:text-[#422e24] transition-colors duration-300">Contato</a>
             </nav>
-            <button class="md:hidden focus:outline-none" id="menu-toggle">
+            <button class="md:hidden focus:outline-none" id="menu-toggle" aria-label="Toggle menu">
                 <i class="fas fa-bars text-xl text-[#976a55]"></i>
             </button>
         </div>
@@ -41,7 +63,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="pt-40 pb-24 px-6 bg-gradient-to-b from-[#fbf3f1] via-[#fff8f6] to-[#fbf3f1]">
+    <section class="pt-40 pb-24 px-6 bg-gradient-to-b from-[#fbf3f1] via-[#fff8f6] to-[#fbf3f1] hero-with-bg">
         <div class="container mx-auto flex flex-col lg:flex-row items-center">
             <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
                 <h1 class="text-4xl lg:text-5xl font-serif font-semibold text-[#976a55] mb-6 leading-tight">
@@ -59,9 +81,8 @@
             </div>
             <div class="lg:w-1/2 flex justify-center">
                 <div class="w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-[#b4b689] shadow-lg">
-                    <!-- Placeholder for profile image - replace with actual image -->
                     <div class="w-full h-full bg-[#e6e0dd] flex items-center justify-center">
-                        <img src="images/profile.jpeg" alt="">
+                        <img src="images/profile.jpeg" alt="Jhony Wictor Santos" class="w-full h-full object-cover" onerror="this.src='images/placeholder.jpg'">
                     </div>
                 </div>
             </div>
@@ -164,7 +185,7 @@
                                 <span class="text-[#976a55] font-medium">95%</span>
                             </div>
                             <div class="w-full bg-[#f3f0ee] rounded-full h-2">
-                                <div class="progress-fill bg-[#b4b689] h-2 rounded-full" style="width: 95%"></div>
+                                <div class="progress-fill bg-[#b4b689] h-2 rounded-full" data-width="95"></div>
                             </div>
                         </div>
                         <div>
@@ -173,7 +194,7 @@
                                 <span class="text-[#976a55] font-medium">90%</span>
                             </div>
                             <div class="w-full bg-[#f3f0ee] rounded-full h-2">
-                                <div class="progress-fill bg-[#b4b689] h-2 rounded-full" style="width: 90%"></div>
+                                <div class="progress-fill bg-[#b4b689] h-2 rounded-full" data-width="90"></div>
                             </div>
                         </div>
                         <div>
@@ -182,7 +203,7 @@
                                 <span class="text-[#976a55] font-medium">80%</span>
                             </div>
                             <div class="w-full bg-[#f3f0ee] rounded-full h-2">
-                                <div class="progress-fill bg-[#b4b689] h-2 rounded-full" style="width: 80%"></div>
+                                <div class="progress-fill bg-[#b4b689] h-2 rounded-full" data-width="80"></div>
                             </div>
                         </div>
                         <div>
@@ -191,7 +212,7 @@
                                 <span class="text-[#976a55] font-medium">85%</span>
                             </div>
                             <div class="w-full bg-[#f3f0ee] rounded-full h-2">
-                                <div class="progress-fill bg-[#b4b689] h-2 rounded-full" style="width: 85%"></div>
+                                <div class="progress-fill bg-[#b4b689] h-2 rounded-full" data-width="85"></div>
                             </div>
                         </div>
                     </div>
@@ -217,7 +238,7 @@
                                 <span class="text-[#976a55] font-medium">90%</span>
                             </div>
                             <div class="w-full bg-[#f3f0ee] rounded-full h-2">
-                                <div class="progress-fill bg-[#976a55] h-2 rounded-full" style="width: 90%"></div>
+                                <div class="progress-fill bg-[#976a55] h-2 rounded-full" data-width="90"></div>
                             </div>
                         </div>
                         <div>
@@ -226,7 +247,7 @@
                                 <span class="text-[#976a55] font-medium">85%</span>
                             </div>
                             <div class="w-full bg-[#f3f0ee] rounded-full h-2">
-                                <div class="progress-fill bg-[#976a55] h-2 rounded-full" style="width: 85%"></div>
+                                <div class="progress-fill bg-[#976a55] h-2 rounded-full" data-width="85"></div>
                             </div>
                         </div>
                         <div>
@@ -235,7 +256,7 @@
                                 <span class="text-[#976a55] font-medium">80%</span>
                             </div>
                             <div class="w-full bg-[#f3f0ee] rounded-full h-2">
-                                <div class="progress-fill bg-[#976a55] h-2 rounded-full" style="width: 80%"></div>
+                                <div class="progress-fill bg-[#976a55] h-2 rounded-full" data-width="80"></div>
                             </div>
                         </div>
                         <div>
@@ -244,7 +265,7 @@
                                 <span class="text-[#976a55] font-medium">88%</span>
                             </div>
                             <div class="w-full bg-[#f3f0ee] rounded-full h-2">
-                                <div class="progress-fill bg-[#976a55] h-2 rounded-full" style="width: 88%"></div>
+                                <div class="progress-fill bg-[#976a55] h-2 rounded-full" data-width="88"></div>
                             </div>
                         </div>
                     </div>
@@ -270,7 +291,7 @@
                                 <span class="text-[#976a55] font-medium">75%</span>
                             </div>
                             <div class="w-full bg-[#f3f0ee] rounded-full h-2">
-                                <div class="progress-fill bg-[#b4b689] h-2 rounded-full" style="width: 75%"></div>
+                                <div class="progress-fill bg-[#b4b689] h-2 rounded-full" data-width="75"></div>
                             </div>
                         </div>
                         <div>
@@ -279,7 +300,7 @@
                                 <span class="text-[#976a55] font-medium">65%</span>
                             </div>
                             <div class="w-full bg-[#f3f0ee] rounded-full h-2">
-                                <div class="progress-fill bg-[#b4b689] h-2 rounded-full" style="width: 65%"></div>
+                                <div class="progress-fill bg-[#b4b689] h-2 rounded-full" data-width="65"></div>
                             </div>
                         </div>
                     </div>
@@ -951,7 +972,8 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
-    <script src="js/certifications.js"></script>
+    <!-- Scripts no final do body -->
+    <script src="js/script.js" defer></script>
+    <script src="js/certifications.js" defer></script>
 </body>
 </html>

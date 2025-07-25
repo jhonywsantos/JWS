@@ -3,37 +3,45 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
     
-    menuToggle.addEventListener('click', function() {
-        mobileMenu.classList.toggle('hidden');
-    });
-    
-    // Close mobile menu when clicking on a link
-    const mobileLinks = mobileMenu.querySelectorAll('a');
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            mobileMenu.classList.add('hidden');
+    if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            menuToggle.querySelector('i').classList.toggle('fa-bars');
+            menuToggle.querySelector('i').classList.toggle('fa-times');
         });
-    });
+        
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+                menuToggle.querySelector('i').classList.add('fa-bars');
+                menuToggle.querySelector('i').classList.remove('fa-times');
+            });
+        });
+    }
     
     // Set current year in footer
-    const currentYear = new Date().getFullYear();
-    document.getElementById('current-year').textContent = currentYear;
+    const currentYearElement = document.getElementById('current-year');
+    if (currentYearElement) {
+        const currentYear = new Date().getFullYear();
+        currentYearElement.textContent = currentYear;
+    }
     
-    // Improved progress bars animation
+    // Animate progress bars when they come into view
     const animateProgressBars = () => {
         const progressBars = document.querySelectorAll('.progress-fill');
         
         progressBars.forEach(bar => {
-            const originalWidth = bar.getAttribute('style');
-            if (!originalWidth) return;
+            const targetWidth = bar.getAttribute('data-width');
+            if (!targetWidth) return;
             
-            const widthValue = originalWidth.match(/width:\s*(\d+)%/);
-            if (!widthValue) return;
-            
+            // Reset animation
             bar.style.width = '0';
+            // Force reflow
             void bar.offsetWidth;
-            
-            bar.style.width = widthValue[1] + '%';
+            // Animate to target width
+            bar.style.width = targetWidth + '%';
         });
     };
     
@@ -83,11 +91,20 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Responsive adjustments for viewport changes
     function handleResize() {
-        if (window.innerWidth >= 768) {
+        if (window.innerWidth >= 768 && mobileMenu) {
             mobileMenu.classList.add('hidden');
+            if (menuToggle) {
+                menuToggle.querySelector('i').classList.add('fa-bars');
+                menuToggle.querySelector('i').classList.remove('fa-times');
+            }
         }
     }
     
     window.addEventListener('resize', handleResize);
     handleResize();
+    
+    // Initialize certifications carousel if present
+    if (document.querySelector('.cert-carousel')) {
+        initCertificationsCarousel();
+    }
 });

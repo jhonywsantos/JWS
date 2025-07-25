@@ -27,11 +27,7 @@ function initCertificationsCarousel() {
     function updateDots() {
         const dots = document.querySelectorAll('.cert-dot');
         dots.forEach((dot, index) => {
-            if (index === currentIndex) {
-                dot.classList.add('active');
-            } else {
-                dot.classList.remove('active');
-            }
+            dot.classList.toggle('active', index === currentIndex);
         });
     }
     
@@ -40,7 +36,7 @@ function initCertificationsCarousel() {
         const screenWidth = window.innerWidth;
         if (screenWidth >= 1024) {
             return 3;
-        } else if (screenWidth >= 640) {
+        } else if (screenWidth >= 768) {
             return 2;
         } else {
             return 1;
@@ -52,7 +48,7 @@ function initCertificationsCarousel() {
         itemsPerView = calculateItemsPerView();
         itemWidth = 100 / itemsPerView;
         
-        document.querySelectorAll('.carousel-item').forEach(item => {
+        items.forEach(item => {
             item.style.width = `${itemWidth}%`;
         });
         
@@ -77,6 +73,10 @@ function initCertificationsCarousel() {
         if (currentIndex < items.length - itemsPerView) {
             currentIndex++;
             moveCarousel();
+        } else {
+            // Voltar para o início se estiver no final
+            currentIndex = 0;
+            moveCarousel();
         }
     }
     
@@ -85,28 +85,24 @@ function initCertificationsCarousel() {
         if (currentIndex > 0) {
             currentIndex--;
             moveCarousel();
+        } else {
+            // Ir para o final se estiver no início
+            currentIndex = Math.max(0, items.length - itemsPerView);
+            moveCarousel();
         }
     }
     
     // Event listeners
-    prevBtn.addEventListener('click', prev);
-    nextBtn.addEventListener('click', next);
+    if (prevBtn) prevBtn.addEventListener('click', prev);
+    if (nextBtn) nextBtn.addEventListener('click', next);
     
-    // Permitir navegação por clique nos cards
-    document.querySelectorAll('.carousel-item').forEach(item => {
-        item.addEventListener('click', function(e) {
-            if (e.target.closest('.carousel-item') === this) {
-                const rect = this.getBoundingClientRect();
-                const clickPosition = e.clientX - rect.left;
-                const halfWidth = rect.width / 2;
-                
-                if (clickPosition > halfWidth) {
-                    next();
-                } else {
-                    prev();
-                }
-            }
-        });
+    // Permitir navegação por teclado para acessibilidade
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowRight') {
+            next();
+        } else if (e.key === 'ArrowLeft') {
+            prev();
+        }
     });
     
     // Lidar com redimensionamento da tela
@@ -118,117 +114,15 @@ function initCertificationsCarousel() {
     createDots();
     updateCarousel();
     
-    // Navegação por teclado para acessibilidade
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'ArrowRight') {
-            next();
-        } else if (e.key === 'ArrowLeft') {
-            prev();
-        }
+    // Auto-rotate carousel (opcional)
+    let autoRotateInterval = setInterval(next, 5000);
+    
+    // Pausar auto-rotação quando o mouse estiver sobre o carrossel
+    container.addEventListener('mouseenter', () => {
+        clearInterval(autoRotateInterval);
+    });
+    
+    container.addEventListener('mouseleave', () => {
+        autoRotateInterval = setInterval(next, 5000);
     });
 }
-
-// Integração com o código JS existente
-document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    if (menuToggle && mobileMenu) {
-        menuToggle.addEventListener('click', function() {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        // Close mobile menu when clicking on a link
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-    }
-    
-    // Set current year in footer
-    const currentYearElement = document.getElementById('current-year');
-    if (currentYearElement) {
-        const currentYear = new Date().getFullYear();
-        currentYearElement.textContent = currentYear;
-    }
-    
-    // Improved progress bars animation
-    const animateProgressBars = () => {
-        const progressBars = document.querySelectorAll('.progress-fill');
-        
-        progressBars.forEach(bar => {
-            const originalWidth = bar.getAttribute('style');
-            if (!originalWidth) return;
-            
-            const widthValue = originalWidth.match(/width:\s*(\d+)%/);
-            if (!widthValue) return;
-            
-            bar.style.width = '0';
-            void bar.offsetWidth;
-            
-            bar.style.width = widthValue[1] + '%';
-        });
-    };
-    
-    const progressObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateProgressBars();
-                progressObserver.unobserve(entry.target);
-            }
-        });
-    }, { 
-        threshold: 0.2,
-        rootMargin: '0px 0px -50px 0px'
-    });
-    
-    const skillsSection = document.getElementById('skills');
-    if (skillsSection) {
-        progressObserver.observe(skillsSection);
-    }
-    
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-    
-    // Form submission handling
-    const contactForm = document.querySelector('form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Mensagem enviada com sucesso! Entrarei em contato em breve.');
-            this.reset();
-        });
-    }
-    
-    // Responsive adjustments for viewport changes
-    function handleResize() {
-        if (window.innerWidth >= 768 && mobileMenu) {
-            mobileMenu.classList.add('hidden');
-        }
-    }
-    
-    window.addEventListener('resize', handleResize);
-    handleResize();
-    
-    // Inicializar o carrossel de certificações
-    if (document.querySelector('.cert-carousel')) {
-        initCertificationsCarousel();
-    }
-});
