@@ -1,7 +1,8 @@
 # 🎨 Portfólio Profissional - Jhony Wictor Santos
 
 Portfólio profissional moderno e responsivo desenvolvido para destacar habilidades, projetos e experiências profissionais.
-<img width="1342" height="598" alt="image" src="https://github.com/user-attachments/assets/b9ce650a-2d6d-4dae-9b7f-5dd1d2421e91" />
+<img width="1340" height="593" alt="image" src="https://github.com/user-attachments/assets/115c1c6c-521e-4a7b-939f-329ca9b41ae6" />
+
 
 🔗 [Demonstração Online](https://jhonywsantos.github.io/JWS/)  📦 [Repositório no GitHub](https://github.com/jhonywsantos/JWS)
 
