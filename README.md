@@ -25,6 +25,9 @@ Este portfólio é uma aplicação web estática criada para apresentar de forma
 <img width="1336" height="637" alt="image" src="https://github.com/user-attachments/assets/4d7ef3bb-d397-4806-8a72-a8a959a3ca38" />
  
 - ✅ **Seção de Contato** com gancho para direcionamento de clientes no WhatsApp.
+- ✅ **Disponível nas versões Mobile e Desktop.**
+<img width="1365" height="650" alt="image" src="https://github.com/user-attachments/assets/3f619f4c-705b-427d-8ff7-960971f6aa3b" />
+
 
 ---
 
