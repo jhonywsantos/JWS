@@ -21,8 +21,8 @@ Este portfólio é uma aplicação web estática criada para apresentar de forma
 <img width="1338" height="632" alt="image" src="https://github.com/user-attachments/assets/caa2c0c0-3dc8-4f4b-baf7-d2cdfd93e364" />
   
 - ✅ **Carrossel de Certificações** interativo
-<img width="1334" height="616" alt="image" src="https://github.com/user-attachments/assets/46fff875-a3eb-45a5-b509-0caf6173a49f" />
-  
+<img width="1336" height="637" alt="image" src="https://github.com/user-attachments/assets/4d7ef3bb-d397-4806-8a72-a8a959a3ca38" />
+ 
 - ✅ **Seção de Contato** com gancho para direcionamento de clientes no WhatsApp.
 
 ---
