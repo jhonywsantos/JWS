@@ -50,7 +50,6 @@ Este portfólio é uma aplicação web estática criada para apresentar de forma
 ### 🧰 Ferramentas Adicionais
 - 📦 **GitHub Pages** – Hospedagem estática
 - 🔄 **Git** – Controle de versão
-- 🎨 **Figma** – Design e prototipagem
 
 ---
 
