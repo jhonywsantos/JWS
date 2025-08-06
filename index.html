@@ -117,11 +117,12 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 px-6 bg-[#fbf3f1] bg-[url('images/backgroundAbout.jpg')] bg-cover bg-center bg-no-repeat bg-blend-lighten">
+    <section id="about" class="py-20 px-6 bg-[url('images/backgroundAbout.jpg')] bg-cover bg-center bg-no-repeat">
         <div class="container mx-auto">
             <h2 class="text-4xl font-serif font-semibold text-[#976a55] mb-12 text-center mx-auto w-full section-title">Sobre Mim</h2>
             <div class="flex flex-col lg:flex-row items-center">
-                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-12">
+                <!-- Text Content Column -->
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-12 p-8 rounded-lg backdrop-blur-sm">
                     <p class="text-lg text-[#555] mb-6 leading-relaxed">
                         Graduando em Ciência da Computação pela UFAL, apaixonado por criar soluções acessíveis e intuitivas.
                     </p>
@@ -132,8 +133,11 @@
                         Minha abordagem combina habilidades técnicas com uma compreensão profunda das necessidades do usuário, resultando em produtos digitais que são tanto funcionais quanto agradáveis de usar.
                     </p>
                 </div>
+
+                <!-- Cards Column -->
                 <div class="lg:w-1/2 grid grid-cols-2 gap-5">
-                    <div class="bg-[#f1e6e3] p-6 rounded-lg shadow-sm hover-raise transition duration-300">
+                    <!-- Formation Card -->
+                    <div class="bg-[#f1e6e3]/90 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300 backdrop-blur-sm">
                         <div class="text-[#976a55] mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book-open">
                                 <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
@@ -143,7 +147,9 @@
                         <h3 class="font-serif font-semibold text-lg text-[#976a55] mb-2">Formação</h3>
                         <p class="text-[#666]">Graduando em Ciência da Computação — UFAL</p>
                     </div>
-                    <div class="bg-[#e7d3d0] p-6 rounded-lg shadow-sm hover-raise transition duration-300">
+
+                    <!-- Experience Card -->
+                    <div class="bg-[#e7d3d0]/90 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300 backdrop-blur-sm">
                         <div class="text-[#b4b689] mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase">
                                 <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
@@ -153,7 +159,9 @@
                         <h3 class="font-serif font-semibold text-lg text-[#976a55] mb-2">Experiência</h3>
                         <p class="text-[#666]">+2 anos em TI e desenvolvimento.</p>
                     </div>
-                    <div class="bg-[#f0e0de] p-6 rounded-lg shadow-sm hover-raise transition duration-300">
+
+                    <!-- Specialization Card -->
+                    <div class="bg-[#f0e0de]/90 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300 backdrop-blur-sm">
                         <div class="text-[#976a55] mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers">
                                 <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
@@ -164,7 +172,9 @@
                         <h3 class="font-serif font-semibold text-lg text-[#976a55] mb-2">Especialização</h3>
                         <p class="text-[#666]">Web Developer | Front-End | UI/UX Designer</p>
                     </div>
-                    <div class="bg-[#f4eae6] p-6 rounded-lg shadow-sm hover-raise transition duration-300">
+
+                    <!-- Objective Card -->
+                    <div class="bg-[#f4eae6]/90 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300 backdrop-blur-sm">
                         <div class="text-[#b4b689] mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-target">
                                 <circle cx="12" cy="12" r="10"></circle>
