@@ -12,7 +12,8 @@ Portfólio profissional moderno e responsivo desenvolvido para destacar habilida
 
 Este portfólio é uma aplicação web estática criada para apresentar de forma elegante e interativa:
 - ✅ **Seção "Sobre Mim"** com informações profissionais e acadêmicas
-<img width="1334" height="633" alt="image" src="https://github.com/user-attachments/assets/3c2f2cc8-81e9-4295-92c3-570ef6933d24" />
+<img width="1336" height="637" alt="image" src="https://github.com/user-attachments/assets/d0d90ba5-cc02-43e1-b90a-242e28be7cbd" />
+
 
 - ✅ **Habilidades Técnicas** com barras de progresso animadas
 <img width="1334" height="635" alt="image" src="https://github.com/user-attachments/assets/736c4d61-a001-4695-8a5a-e993150839ec" />
