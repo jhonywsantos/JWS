@@ -22,8 +22,9 @@ Este portfólio é uma aplicação web estática criada para apresentar de forma
 - ✅ **Linha do Tempo** da experiência profissional
 <img width="1338" height="632" alt="image" src="https://github.com/user-attachments/assets/caa2c0c0-3dc8-4f4b-baf7-d2cdfd93e364" />
   
-- ✅ **Carrossel de Certificações** interativo
-<img width="1340" height="638" alt="image" src="https://github.com/user-attachments/assets/17d1cbd0-03f3-434e-8dc1-8a285689fd48" />
+- ✅ **Carrossel de Certificações** interativo com efeito Glassmorphism.
+<img width="1331" height="636" alt="image" src="https://github.com/user-attachments/assets/7b9d42b7-080d-4a4c-b8b3-995401aa9374" />
+
 
  
 - ✅ **Seção de Contato** com gancho para direcionamento de clientes no WhatsApp.
