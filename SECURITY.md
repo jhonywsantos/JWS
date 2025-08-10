@@ -51,6 +51,6 @@ Sua colaboração será muito bem-vinda e ajudará a manter o projeto seguro e f
 ---
 
 **Jhony Wictor Santos**  
-Web Developer | Front-End | UI/UX Designer 
+Web Developer | Front-End | IT Support 
 [LinkedIn](https://www.linkedin.com/in/jhony-wictor-n-santos-4b8a85237/) • [GitHub](https://github.com/jhonywsantos) • [Instagram](https://instagram.com/jhonywictor)
 
