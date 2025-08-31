@@ -23,7 +23,8 @@ Este portfólio é uma aplicação web estática criada para apresentar de forma
 <img width="1338" height="632" alt="image" src="https://github.com/user-attachments/assets/caa2c0c0-3dc8-4f4b-baf7-d2cdfd93e364" />
   
 - ✅ **Carrossel de Certificações** interativo com efeito Glassmorphism.
-<img width="1331" height="636" alt="image" src="https://github.com/user-attachments/assets/7b9d42b7-080d-4a4c-b8b3-995401aa9374" />
+<img width="1348" height="638" alt="image" src="https://github.com/user-attachments/assets/8a756745-c3fb-4acb-b256-8d2d930fd476" />
+
 
 
  
@@ -37,18 +38,11 @@ Este portfólio é uma aplicação web estática criada para apresentar de forma
 ## 🛠️ Tecnologias Utilizadas
 
 ### 🌐 Frontend
-![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TailwindCSS](https://img.shields.io/badge/-TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Font Awesome](https://img.shields.io/badge/-Font%2520Awesome-528DD7?style=for-the-badge&logo=font-awesome&logoColor=white)
-![Google Fonts](https://img.shields.io/badge/-Google%2520Fonts-4285F4?style=for-the-badge&logo=google-fonts&logoColor=white)
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="30" alt="HTML5"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="30" alt="CSS3"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="JavaScript"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" height="30" alt="TailwindCSS"/>
 
 ### 🎛️ Funcionalidades Avançadas
-![Intersection Observer](https://img.shields.io/badge/-Intersection%2520Observer-FF6B6B?style=for-the-badge&logo=javascript&logoColor=white)
-![CSS Animations](https://img.shields.io/badge/-CSS%2520Animations-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Responsive Design](https://img.shields.io/badge/-Responsive%2520Design-43B02A?style=for-the-badge&logo=responsive-design&logoColor=white)
-![Carousel JS](https://img.shields.io/badge/-Carousel%2520JS-FF9E0F?style=for-the-badge&logo=javascript&logoColor=white)
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="30" alt="CSS3"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="JavaScript"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" height="30" alt="Figma"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="30" alt="Git"/>  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" height="30" alt="VS Code"/>
 
 ### 🧰 Ferramentas Adicionais
 - 📦 **GitHub Pages** – Hospedagem estática
